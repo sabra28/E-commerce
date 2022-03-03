@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AvisController!{% endblock %}
+
+{% block body %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>avis</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for avis in aviss %}
+        <tr>
+            <td>{{ avis.id }}</td>
+            <td>{{ avis.description }}</td>
+        </tr>
+    {% else %}
+        <tr>
+            <td colspan="6">Aucun avis </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

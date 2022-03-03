@@ -1,0 +1,35 @@
+
+{% extends 'base.html.twig' %}
+{% block body %}
+<br>
+<br>
+<br>
+<tbody>
+
+<div class="featured container ">
+      <div class=" row posts">
+        {% for panier in paniers %}
+        <div id="{{panier.id }}" class="item new col-md-2">
+            <div class="featured-item ">
+              <a href="{{ path('article_show', {'id': panier.Article.id}) }}"> <img src="{{ panier.Article.image }}"  alt="image de l'article"></a>
+            <h4>{{panier.Article.nom}}<h4>
+            <h6>{{panier.Article.prix}}€</h6>
+
+              <form method="post" action="{{ path('panier_delete', {'id': panier.id}) }}" onsubmit="return confirm('Etes vous sur de le supprimer ?');">
+                  <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ panier.id) }}">
+                  <button class="btn">Supprimer</button>
+              </form>
+
+              </div>
+            </div>
+
+          {% else %}
+              <tr>
+                  <td colspan="6">Vous n'avez aucun article dans votre panier </td>
+              </tr>
+          {% endfor %}
+          </div>
+          </div>
+
+        </tbody>
+  {% endblock %}

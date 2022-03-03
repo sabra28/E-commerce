@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<br>
+<br>
+<br>
+<tbody>
+
+
+
+      <div class="featured container ">
+      <div class="row posts">
+        {% for article in articles %}
+        <div id="{{ article.id }}" class="item new col-md-4">
+            <div class="featured-item">
+              <a href="{{ path('article_show', {'id': article.id}) }}"> <img src="{{ article.image }}"  alt="image de l'article"></a>
+              <h4>{{ article.nom }}</h4>
+              <h6>{{ article.prix }}€</h6>
+              <div  class="main-button" align="right">
+                {% if is_granted ('IS_AUTHENTICATED_FULLY') %}
+                <a href="{{ path('panier_add', {'id' : article.id}) }}">Panier</a>
+                  {% else %}
+                      <a href="{{ path('app_login') }}">Connexion</a>
+                        {% endif %}
+              </div>
+            </div>
+            </div>
+
+          {% endfor %}
+
+          </div>
+          </div>
+        </tbody>
+  {% endblock %}
