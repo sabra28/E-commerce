@@ -13,7 +13,7 @@ Installation
 ------------
 
 ```bash
-git clone https://github.com/Antoine87/symfony-ecommerce.git
+git clone https://github.com/sabra28/E-commerce.git
 cd symfony-ecommerce
 composer install
 yarn
