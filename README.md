@@ -5,8 +5,8 @@ E-commerce web application.
 Requirements
 ------------
 
-  * PHP 7.1.3 or higher;
-  * Symfony 5 
+  * PHP 7.1.3 ;
+  * Symfony 5 ;
   * Wamp (PHPMYADMIN)
 
 Installation
@@ -17,7 +17,7 @@ git clone https://github.com/sabra28/E-commerce.git
 cd symfony-ecommerce
 Modifier le .env root:@127.
 composer install
-php bin/console doctrine:schema:create
+php bin/console doctrine:database:import symfonyecommerce.sql
 ```
 
 
