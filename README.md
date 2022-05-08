@@ -15,9 +15,9 @@ Installation
 ```bash
 git clone https://github.com/sabra28/E-commerce.git
 cd symfony-ecommerce
+Modifier le .env root:@127.
 composer install
-yarn
-yarn run dev
+php bin/console doctrine:schema:create
 ```
 
 
@@ -25,7 +25,7 @@ Usage
 -----
 
 ```bash
-php bin/console server:run
+php bin/console server:start
 ```
 
 [1]: https://symfony.com/doc/current/reference/requirements.html
