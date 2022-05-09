@@ -13,11 +13,12 @@ Installation
 ------------
 
 ```bash
+Vous pouvez visualiser Copy of mcd E-commerce , use case com
 git clone https://github.com/sabra28/E-commerce.git
 cd symfony-ecommerce
 Modifier le .env root:@127.
 composer install
-php bin/console doctrine:database:import symfonyecommerce.sql
+php bin/console doctrine:database:import symfonyecommerce.sql 
 ```
 
 
@@ -26,6 +27,8 @@ Usage
 
 ```bash
 php bin/console server:start
+Compte Admin: sabra28@icloud.com
+mdp : sabra28
 ```
 
 [1]: https://symfony.com/doc/current/reference/requirements.html
