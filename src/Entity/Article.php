@@ -44,10 +44,6 @@ class Article
      */
     private $paniers;
 
-    /**
-     * @ORM\OneToMany(targetEntity=Avis::class, mappedBy="commentaire", orphanRemoval=true)
-     */
-    private $avis;
 
     public function __construct()
     {
@@ -139,33 +135,5 @@ class Article
         return $this;
     }
 
-    /**
-     * @return Collection|Avis[]
-     */
-    public function getAvis(): Collection
-    {
-        return $this->avis;
-    }
 
-    public function addAvi(Avis $avi): self
-    {
-        if (!$this->avis->contains($avi)) {
-            $this->avis[] = $avi;
-            $avi->setCommentaire($this);
-        }
-
-        return $this;
-    }
-
-    public function removeAvi(Avis $avi): self
-    {
-        if ($this->avis->removeElement($avi)) {
-            // set the owning side to null (unless already changed)
-            if ($avi->getCommentaire() === $this) {
-                $avi->setCommentaire(null);
-            }
-        }
-
-        return $this;
-    }
 }

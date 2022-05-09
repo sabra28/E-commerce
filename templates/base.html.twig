@@ -59,7 +59,9 @@
             <li class="nav-item">
             <a class="nav-link" href="{{ path('app_logout') }}"> déconnexion</a>
             <li class="nav-item">
+            {% if is_granted ('ROLE_ADMIN') %}
             <a class="nav-link" href="{{ path('article_new')}}"> ajout article</a>
+            {% endif %}
           </li>
               {% else %}
             <li class="nav-item">

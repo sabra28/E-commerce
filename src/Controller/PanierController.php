@@ -66,7 +66,7 @@ class PanierController extends AbstractController
      /**
       *  @Route("/{id}", name="panier_delete", methods={"POST"})
       */
-     public function delete (int $id, Request $request, Panier $panier, EntityManagerInterface $entityManager): Response
+  /*  public function delete (int $id, Request $request, Panier $panier, EntityManagerInterface $entityManager): Response
      {
        if ($this->isCsrfTokenValid('delete'.$panier->getId(), $request->request->get('_token'))) {
            $entityManager->remove($panier);
@@ -75,6 +75,7 @@ class PanierController extends AbstractController
 
          return $this->redirectToRoute("panier", [], Response::HTTP_SEE_OTHER);
        }
+       */
 
 
 }
