@@ -1,5 +1,4 @@
 # E-commerce projet
-========================
 E-commerce web application.
 
 Requirements
