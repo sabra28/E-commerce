@@ -15,7 +15,7 @@ Installation
 Vous pouvez visualiser Copy of mcd E-commerce , use case com
 git clone https://github.com/sabra28/E-commerce.git
 cd symfony-ecommerce
-Modifier le .env root:@127.
+Modifier le .env ligne 30 root c'est identifiant , mettre le mdp apres les : 
 composer install
 php bin/console doctrine:database:import symfonyecommerce.sql 
 ```
